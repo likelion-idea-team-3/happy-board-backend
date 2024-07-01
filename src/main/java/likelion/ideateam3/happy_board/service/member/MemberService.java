@@ -52,6 +52,6 @@ public class MemberService {
 
         // 토큰 발급
         String token = tokenProvider.createToken(savedMember.getEmail(), savedMember.getRole());
-        return new LoginResponse(token);
+        return new LoginResponse(token, savedMember.getNickname());
     }
 }
